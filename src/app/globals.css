@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --seafoam: 74 210 180;
+  --deepteal: 16 96 94;
+  --sand: 250 251 246;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-deepteal antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 5% -10%, rgba(74, 210, 180, 0.35), transparent 60%),
+    radial-gradient(900px 520px at 100% 0%, rgba(16, 96, 94, 0.25), transparent 55%),
+    linear-gradient(180deg, #f7fdfb 0%, #fafbf6 60%, #f1faf6 100%);
+}
+
+section {
+  @apply scroll-mt-24;
+}
+
+@layer components {
+  .glass {
+    @apply rounded-3xl border border-white/60 bg-white/70 backdrop-blur-md shadow-[0_18px_60px_rgba(16,96,94,0.12)];
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold tracking-tight text-deepteal sm:text-4xl;
+  }
+
+  .section-kicker {
+    @apply text-xs uppercase tracking-[0.3em] text-deepteal/70;
+  }
+
+  .cta-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-deepteal px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-sand transition hover:translate-y-[-1px] hover:bg-midnight;
+  }
+
+  .cta-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-deepteal/30 bg-white/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-deepteal transition hover:translate-y-[-1px] hover:border-deepteal;
+  }
+}

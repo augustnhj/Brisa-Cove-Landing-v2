@@ -1,25 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import FavoritesSection from "@/components/FavoritesSection";
-
-const heroImages = [
-  {
-    src: "/images/surf-community.jpeg",
-    alt: "Surf and community moments at the beach",
-  },
-  {
-    src: "/images/cafe-outside.jpg",
-    alt: "Brisa Cove cafe exterior at Haviksanden",
-  },
-  {
-    src: "/images/seating-inside-or-outside.jpg",
-    alt: "Relaxed seating inside Brisa Cove",
-  },
-  {
-    src: "/images/Sunset.jpg",
-    alt: "Sunset at Haviksanden beach",
-  },
-];
+import NextEventSection from "@/components/NextEventSection";
 
 const experienceImages = [
   {
@@ -36,26 +18,29 @@ const experienceImages = [
   },
 ];
 
+const heroSlogan = "Salt air, surf, and slow days";
+const heroSloganLoop = `${heroSlogan} • ${heroSlogan} • ${heroSlogan} • ${heroSlogan} •`;
+
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <header className="px-6 pb-8 pt-6 sm:px-10">
+      <header className="w-full border-b border-deepteal/10 bg-sand/95 px-6 py-3 shadow-[0_8px_30px_rgba(16,96,94,0.12)] sm:px-10 sm:py-4">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-12 w-12 overflow-hidden rounded-full border border-white/70 bg-white/70">
+            <div className="relative h-14 w-14 overflow-hidden rounded-full border border-white/70 bg-white/70 sm:h-16 sm:w-16">
               <Image
                 src="/images/Logo.png"
                 alt="Brisa Cove logo"
                 fill
                 className="object-cover"
-                sizes="48px"
+                sizes="64px"
               />
             </div>
             <div>
-              <p className="font-display text-lg font-semibold text-deepteal">
+              <p className="font-display text-lg font-semibold text-deepteal sm:text-xl">
                 Brisa Cove
               </p>
-              <p className="text-xs uppercase tracking-[0.3em] text-deepteal/60">
+              <p className="text-[0.65rem] uppercase tracking-[0.3em] text-deepteal/60 sm:text-xs">
                 Haviksanden, Lista
               </p>
             </div>
@@ -63,6 +48,9 @@ export default function Home() {
           <nav className="hidden items-center gap-6 text-xs font-semibold uppercase tracking-[0.2em] text-deepteal/70 md:flex">
             <a href="#experience" className="hover:text-deepteal">
               Experience
+            </a>
+            <a href="#event" className="hover:text-deepteal">
+              Next Event
             </a>
             <a href="#favorites" className="hover:text-deepteal">
               Favorites
@@ -80,60 +68,83 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="px-6 pb-16 sm:px-10">
-        <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="flex flex-col gap-6">
-            <p className="section-kicker">Opening Summer 2026</p>
-            <h1 className="font-display text-4xl font-semibold tracking-tight text-deepteal sm:text-5xl">
-              The beach cafe where surf and good vibes meet
-            </h1>
-            <p className="max-w-xl text-base text-deepteal/70 sm:text-lg">
-              Simple and delicious food, relaxed atmosphere – a natural meeting
-              point on the beach.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/menu" className="cta-primary">
-                See menu
-              </Link>
-              <a href="#visit" className="cta-secondary">
-                Visit us today
-              </a>
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm font-semibold uppercase tracking-[0.2em]">
-              <a
-                href="#visit"
-                className="rounded-full border border-deepteal/20 bg-white/70 px-4 py-2 text-deepteal/80 transition hover:border-deepteal"
-              >
-                Follow us on Instagram
-              </a>
-              <a
-                href="#visit"
-                className="rounded-full border border-deepteal/20 bg-white/70 px-4 py-2 text-deepteal/80 transition hover:border-deepteal"
-              >
-                Book event
-              </a>
-            </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {heroImages.map((image, index) => (
-              <div
-                key={image.src}
-                className={`relative h-40 overflow-hidden rounded-3xl border border-white/70 sm:h-48 ${
-                  index === 0 ? "sm:col-span-2 sm:h-56" : ""
-                }`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+      <section className="relative min-h-screen overflow-hidden">
+        <Image
+          src="/images/hero-art.png"
+          alt="Brisa Cove coastal art backdrop"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="pointer-events-none absolute inset-0 hidden w-full motion-safe:block">
+          <svg
+            className="h-full w-full"
+            viewBox="0 0 900 900"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              id="hero-wave-path"
+              d="M 10 400 C 180 250, 420 240, 620 260 C 760 280, 820 330, 850 390 C 880 470, 820 600, 760 690 C 650 820, 430 880, 250 860 C 120 850, 40 820, 20 780"
+              fill="none"
+              stroke="none"
+            />
+            <text className="font-wave fill-current text-[clamp(1.4rem,3.6vw,3.1rem)] text-deepteal/45">
+              <textPath href="#hero-wave-path" startOffset="0%">
+                {heroSloganLoop}
+                <animate
+                  attributeName="startOffset"
+                  from="0%"
+                  to="100%"
+                  dur="6s"
+                  repeatCount="indefinite"
                 />
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <div className="flex flex-1 items-center px-6 pb-16 sm:px-10">
+            <div className="mx-auto w-full max-w-6xl">
+              <div className="glass wave-in relative z-20 flex max-w-xl flex-col gap-5 p-6 sm:gap-6 sm:p-7">
+                <p className="section-kicker">Opening Summer 2026</p>
+                <h1 className="font-display text-4xl font-semibold tracking-tight text-deepteal sm:text-5xl">
+                  The beach cafe where surf and good vibes meet
+                </h1>
+                <p className="max-w-xl text-base text-deepteal/70 sm:text-lg">
+                  Simple and delicious food, relaxed atmosphere – a natural meeting
+                  point on the beach.
+                </p>
+                <div className="flex flex-wrap gap-4 pt-3">
+                  <Link href="/menu" className="cta-primary">
+                    See menu
+                  </Link>
+                  <a href="#visit" className="cta-secondary">
+                    Visit us today
+                  </a>
+                </div>
+                <div className="flex flex-wrap gap-4 pt-2 text-sm font-semibold uppercase tracking-[0.2em]">
+                  <a
+                    href="#visit"
+                    className="rounded-full border border-deepteal/20 bg-white/70 px-4 py-2 text-deepteal/80 transition hover:border-deepteal"
+                  >
+                    Follow us on Instagram
+                  </a>
+                  <a
+                    href="#visit"
+                    className="rounded-full border border-deepteal/20 bg-white/70 px-4 py-2 text-deepteal/80 transition hover:border-deepteal"
+                  >
+                    Book event
+                  </a>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
+
+      <NextEventSection />
 
       <section id="experience" className="px-6 py-16 sm:px-10">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">

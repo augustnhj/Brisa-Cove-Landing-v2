@@ -13,6 +13,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-display)", "serif"],
         sans: ["var(--font-sans)", "sans-serif"],
+        wave: ["var(--font-wave)", "cursive"],
       },
       boxShadow: {
         glow: "0 24px 70px rgba(74, 210, 180, 0.35)",

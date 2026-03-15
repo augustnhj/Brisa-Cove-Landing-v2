@@ -45,3 +45,32 @@ section {
     @apply inline-flex items-center justify-center rounded-full border border-deepteal/30 bg-white/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-deepteal transition hover:translate-y-[-1px] hover:border-deepteal;
   }
 }
+
+@layer utilities {
+  .wave-in {
+    animation: wave-in 1300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes wave-in {
+  0% {
+    opacity: 0;
+    transform: translateY(70px) rotate(-6deg) scale(0.92);
+    filter: blur(8px);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(-12px) rotate(1.8deg) scale(1.03);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-in {
+    animation: none;
+  }
+}

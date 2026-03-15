@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Fraunces } from "next/font/google";
+import { Bricolage_Grotesque, Fraunces, Satisfy } from "next/font/google";
 import "./globals.css";
 
 const bodyFont = Bricolage_Grotesque({
@@ -11,6 +11,13 @@ const bodyFont = Bricolage_Grotesque({
 const displayFont = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const waveFont = Satisfy({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-wave",
   display: "swap",
 });
 
@@ -26,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
+    <html
+      lang="en"
+      className={`${bodyFont.variable} ${displayFont.variable} ${waveFont.variable}`}
+    >
       <body className="font-sans">
         {children}
       </body>

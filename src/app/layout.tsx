@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Fraunces, Satisfy } from "next/font/google";
+import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 const bodyFont = Bricolage_Grotesque({
@@ -38,7 +39,7 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${waveFont.variable}`}
     >
       <body className="font-sans">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

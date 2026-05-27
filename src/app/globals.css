@@ -34,15 +34,15 @@ section {
   }
 
   .section-kicker {
-    @apply text-xs uppercase tracking-[0.3em] text-deepteal/70;
+    @apply text-xs uppercase tracking-[0.15em] text-deepteal/70;
   }
 
   .cta-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-deepteal px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-sand transition hover:translate-y-[-1px] hover:bg-midnight;
+    @apply inline-flex items-center justify-center rounded-full bg-deepteal px-6 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-sand transition hover:translate-y-[-1px] hover:bg-midnight;
   }
 
   .cta-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-deepteal/30 bg-white/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-deepteal transition hover:translate-y-[-1px] hover:border-deepteal;
+    @apply inline-flex items-center justify-center rounded-full border border-deepteal/30 bg-white/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.1em] text-deepteal transition hover:translate-y-[-1px] hover:border-deepteal;
   }
 }
 

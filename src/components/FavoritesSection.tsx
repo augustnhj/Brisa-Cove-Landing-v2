@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import LanguageToggle from "@/components/LanguageToggle";
 import MenuCard from "@/components/MenuCard";
 import { favorites, MenuLanguage, nutritionLabels } from "@/data/menu";
+import { useLanguage } from "@/context/LanguageContext";
 
 const copy = {
   en: {
@@ -19,25 +18,30 @@ const copy = {
     note: "Full meny åpner på engelsk, med Norsk-valg.",
     cta: "Se hele menyen",
   },
+  de: {
+    kicker: "Ausgewählte Favoriten",
+    title: "Ein paar Publikumslieblinge zum Einstieg",
+    note: "Vollständiges Menü öffnet auf Englisch.",
+    cta: "Vollständiges Menü ansehen",
+  },
 };
 
 export default function FavoritesSection() {
-  const [language, setLanguage] = useState<MenuLanguage>("en");
-  const labels = nutritionLabels[language];
+  const { language } = useLanguage();
+  // Menu data only has EN/NO; fall back to English for German
+  const lang: MenuLanguage = language === "de" ? "en" : language;
+  const labels = nutritionLabels[lang];
   const text = copy[language];
 
   return (
     <section id="favorites" className="px-6 py-16 sm:px-10">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="section-kicker">{text.kicker}</p>
-            <h2 className="section-title">{text.title}</h2>
-          </div>
-          <LanguageToggle value={language} onChange={setLanguage} />
+        <div className="flex flex-col gap-4">
+          <p className="section-kicker">{text.kicker}</p>
+          <h2 className="section-title">{text.title}</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {favorites[language].map((item) => (
+          {favorites[lang].map((item) => (
             <MenuCard key={item.id} item={item} labels={labels} />
           ))}
         </div>

@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { nextEvent } from "@/data/events";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function NextEventSection() {
+  const { language } = useLanguage();
+  const copy = nextEvent[language];
+
   return (
     <section id="event" className="px-6 pb-16 sm:px-10">
       <div className="mx-auto w-full max-w-6xl">
@@ -10,12 +16,12 @@ export default function NextEventSection() {
           <div className="pointer-events-none absolute -bottom-16 -left-12 h-40 w-40 rounded-full bg-deepteal/15 blur-3xl" />
           <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-col gap-3">
-              <p className="section-kicker">Next event</p>
+              <p className="section-kicker">{copy.kickerLabel}</p>
               <h2 className="font-display text-3xl font-semibold text-deepteal sm:text-4xl">
-                {nextEvent.title}
+                {copy.title}
               </h2>
               <p className="max-w-2xl text-base text-deepteal/70">
-                {nextEvent.description}
+                {copy.description}
               </p>
               {nextEvent.location ? (
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-deepteal/60">
@@ -33,7 +39,7 @@ export default function NextEventSection() {
                 </p>
               </div>
               <Link href={nextEvent.ctaHref} className="cta-primary">
-                {nextEvent.ctaLabel}
+                {copy.ctaLabel}
               </Link>
             </div>
           </div>

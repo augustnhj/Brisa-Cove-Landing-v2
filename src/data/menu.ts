@@ -97,7 +97,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
         {
           id: "nacho-shore-platter",
           name: "Nacho Shore Platter",
-          description: "Nachos, cheddar, salsa, jalapeños",
+          description: "Nachos, cheddar, salsa, jalapeños, black beans, onions",
           nutrition: { kcal: "820", protein: "16 g", fat: "48 g", carbs: "78 g" },
           price: "139 kr",
         },
@@ -284,7 +284,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
         {
           id: "nacho-shore-platter",
           name: "Nacho Shore Platter",
-          description: "Nachos, cheddar, salsa, jalapeños",
+          description: "Nachos, cheddar, salsa, jalapeños, svarte bønner, løk",
           nutrition: { kcal: "820", protein: "16 g", fat: "48 g", carbs: "78 g" },
           price: "139 kr",
         },
@@ -471,7 +471,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
         {
           id: "nacho-shore-platter",
           name: "Nacho Shore Platter",
-          description: "Nachos, Cheddar, Salsa, Jalapeños",
+          description: "Nachos, Cheddar, Salsa, Jalapeños, schwarze Bohnen, Zwiebeln",
           nutrition: { kcal: "820", protein: "16 g", fat: "48 g", carbs: "78 g" },
           price: "139 kr",
         },

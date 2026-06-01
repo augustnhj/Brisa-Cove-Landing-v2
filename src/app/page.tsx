@@ -60,22 +60,21 @@ const t = {
       title: "Locally driven. Created for summer. Built for community.",
       description:
         "Rooted in Lista, Brisa Cove celebrates the people and makers who shape the coast. Expect collaborations with local surf crews, artists, and producers as the seasons roll in.",
-      partners: ["Local surf schools", "Regional roasters", "Beach creatives"],
+      partners: ["Local surf schools", "Partnership with Farsund Folkepub", "Local artists"],
     },
     visit: {
       kicker: "Practical info",
       title: "Plan your beach day",
-      comingSoon: "Coming soon: opening hours, bookings, and Instagram details",
       hours: {
         label: "Opening hours",
-        value: "Coming Summer 2026. Hours announced closer to opening.",
+        value: "Wednesday  11:30–21:30\nFriday  11:30–23:30\nSaturday  11:30–23:30\nSunday  11:30–21:30",
       },
       location: { label: "Find us", value: "Haviksanden Beach, Lista, Norway" },
-      instagram: { label: "Instagram", value: "Handle coming soon" },
+      booking: { label: "Bookings", value: "sondreeikeland@brisacove.no" },
+      social: { label: "Follow us" },
+      contact: { label: "Contact" },
       ctaMenu: "See menu",
       ctaBook: "Book event",
-      ctaInstagram: "Follow us on Instagram",
-      note: "We will open bookings and social channels before launch.",
       tagline: "Good vibes. Fresh bites. Beach life.",
     },
     heroSlogan: "Salt air, surf, and slow days",
@@ -131,22 +130,21 @@ const t = {
       title: "Lokal getrieben. Für den Sommer geschaffen. Für die Gemeinschaft gebaut.",
       description:
         "Mit Wurzeln in Lista feiert Brisa Cove die Menschen und Macher, die die Küste prägen. Erwartet Kooperationen mit lokalen Surfclubs, Künstlern und Produzenten, wenn die Saisons kommen.",
-      partners: ["Lokale Surfschulen", "Regionale Röster", "Strandkreative"],
+      partners: ["Lokale Surfschulen", "Partnerschaft mit Farsund Folkepub", "Lokale Künstler"],
     },
     visit: {
       kicker: "Praktische Infos",
       title: "Plant euren Strandtag",
-      comingSoon: "Demnächst: Öffnungszeiten, Buchungen und Instagram-Details",
       hours: {
         label: "Öffnungszeiten",
-        value: "Kommt Sommer 2026. Zeiten werden näher zur Eröffnung bekannt gegeben.",
+        value: "Mittwoch  11:30–21:30\nFreitag  11:30–23:30\nSamstag  11:30–23:30\nSonntag  11:30–21:30",
       },
       location: { label: "Findet uns", value: "Haviksanden Strand, Lista, Norwegen" },
-      instagram: { label: "Instagram", value: "Handle kommt bald" },
+      booking: { label: "Buchungen", value: "sondreeikeland@brisacove.no" },
+      social: { label: "Folgt uns" },
+      contact: { label: "Kontakt" },
       ctaMenu: "Menü ansehen",
       ctaBook: "Event buchen",
-      ctaInstagram: "Folgt uns auf Instagram",
-      note: "Wir öffnen Buchungen und soziale Kanäle vor der Eröffnung.",
       tagline: "Gute Stimmung. Frische Bissen. Strandleben.",
     },
     heroSlogan: "Salzluft, Surf und langsame Tage",
@@ -202,22 +200,21 @@ const t = {
       title: "Lokalt drevet. Skapt for sommeren. Bygget for fellesskap.",
       description:
         "Med røtter i Lista feirer Brisa Cove menneskene og skaperne som former kysten. Forvent samarbeid med lokale surfegrupper, kunstnere og produsenter etter hvert som sesongene rulles inn.",
-      partners: ["Lokale surfskoler", "Regionale brennerier", "Strandkreative"],
+      partners: ["Lokale surfskoler", "Samarbeid med Farsund Folkepub", "Lokale kunstnere"],
     },
     visit: {
       kicker: "Praktisk info",
       title: "Planlegg stranddagen din",
-      comingSoon: "Kommer snart: åpningstider, bestillinger og Instagram-detaljer",
       hours: {
         label: "Åpningstider",
-        value: "Kommer sommeren 2026. Timer kunngjøres nærmere åpning.",
+        value: "Onsdag  11:30–21:30\nFredag  11:30–23:30\nLørdag  11:30–23:30\nSøndag  11:30–21:30",
       },
       location: { label: "Finn oss", value: "Haviksanden strand, Lista, Norge" },
-      instagram: { label: "Instagram", value: "Brukernavn kommer snart" },
+      booking: { label: "Bestillinger", value: "sondreeikeland@brisacove.no" },
+      social: { label: "Følg oss" },
+      contact: { label: "Kontakt" },
       ctaMenu: "Se meny",
       ctaBook: "Book arrangement",
-      ctaInstagram: "Følg oss på Instagram",
-      note: "Vi åpner bestillinger og sosiale kanaler før lansering.",
       tagline: "God stemning. Ferske biter. Strandliv.",
     },
     heroSlogan: "Salt luft, surf og langsomme dager",
@@ -398,20 +395,17 @@ export default function Home() {
 
       <section id="visit" className="px-6 pb-20 pt-16 sm:px-10">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
-          <div className="glass flex flex-col gap-6 p-8">
+          <div className="glass flex flex-col gap-8 p-8">
             <div>
               <p className="section-kicker">{copy.visit.kicker}</p>
               <h2 className="section-title">{copy.visit.title}</h2>
-            </div>
-            <div className="rounded-2xl border border-seafoam/40 bg-seafoam/10 px-5 py-4 text-sm font-medium text-deepteal">
-              {copy.visit.comingSoon}
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
                   {copy.visit.hours.label}
                 </h3>
-                <p className="mt-2 text-base text-deepteal">{copy.visit.hours.value}</p>
+                <p className="mt-2 whitespace-pre-line text-base text-deepteal">{copy.visit.hours.value}</p>
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
@@ -421,23 +415,45 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
-                  {copy.visit.instagram.label}
+                  {copy.visit.booking.label}
                 </h3>
-                <p className="mt-2 text-base text-deepteal">{copy.visit.instagram.value}</p>
+                <a href="mailto:sondreeikeland@brisacove.no" className="mt-2 block text-base text-deepteal hover:text-seafoam transition-colors">
+                  {copy.visit.booking.value}
+                </a>
+              </div>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
+                  {copy.visit.social.label}
+                </h3>
+                <div className="mt-2 flex flex-wrap gap-3">
+                  <a href="https://www.instagram.com/brisacove/" target="_blank" rel="noopener noreferrer" className="text-base text-deepteal hover:text-seafoam transition-colors font-medium">Instagram</a>
+                  <span className="text-deepteal/30">·</span>
+                  <a href="https://www.tiktok.com/@brisacove" target="_blank" rel="noopener noreferrer" className="text-base text-deepteal hover:text-seafoam transition-colors font-medium">TikTok</a>
+                  <span className="text-deepteal/30">·</span>
+                  <a href="https://www.facebook.com/profile.php?id=61583727041867" target="_blank" rel="noopener noreferrer" className="text-base text-deepteal hover:text-seafoam transition-colors font-medium">Facebook</a>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
+                  {copy.visit.contact.label}
+                </h3>
+                <div className="mt-2 flex flex-col gap-1 text-base text-deepteal">
+                  <a href="tel:+4740194390" className="hover:text-seafoam transition-colors">+47 401 94 390</a>
+                  <a href="tel:+4748438319" className="hover:text-seafoam transition-colors">+47 484 38 319</a>
+                  <a href="mailto:sondreeikeland@brisacove.no" className="hover:text-seafoam transition-colors">sondreeikeland@brisacove.no</a>
+                </div>
               </div>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link href="/menu" className="cta-secondary">
                 {copy.visit.ctaMenu}
               </Link>
-              <a href="#visit" className="cta-primary">
+              <a href="mailto:sondreeikeland@brisacove.no" className="cta-primary">
                 {copy.visit.ctaBook}
               </a>
-              <a href="#visit" className="cta-secondary">
-                {copy.visit.ctaInstagram}
-              </a>
             </div>
-            <p className="text-sm text-deepteal/60">{copy.visit.note}</p>
           </div>
           <p className="text-center text-lg font-semibold uppercase tracking-[0.2em] text-seafoam">
             {copy.visit.tagline}

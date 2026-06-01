@@ -326,7 +326,7 @@ export default function Home() {
 
       <NextEventSection />
 
-      <section id="experience" className="px-6 py-16 sm:px-10">
+      <section id="experience" className="px-6 py-16 sm:px-10 bg-gradient-to-b from-transparent via-seafoam/8 to-seafoam/5">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
           <div className="flex flex-col gap-4">
             <p className="section-kicker">{copy.experience.kicker}</p>
@@ -349,7 +349,7 @@ export default function Home() {
 
       <FavoritesSection />
 
-      <section id="activities" className="px-6 py-16 sm:px-10">
+      <section id="activities" className="px-6 py-16 sm:px-10 bg-deepteal/5">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
           <div className="flex flex-col gap-4">
             <p className="section-kicker">{copy.activities.kicker}</p>
@@ -360,7 +360,7 @@ export default function Home() {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {copy.activities.cards.map((card) => (
-              <div key={card.title} className="glass p-6">
+              <div key={card.title} className="glass p-6 border-l-4 border-l-seafoam">
                 <h3 className="text-lg font-semibold text-deepteal">{card.title}</h3>
                 <p className="mt-2 text-sm text-deepteal/70">{card.description}</p>
               </div>
@@ -374,7 +374,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="local" className="px-6 py-16 sm:px-10">
+      <section id="local" className="px-6 py-16 sm:px-10 bg-gradient-to-br from-deepteal/8 to-seafoam/10">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="section-kicker">{copy.local.kicker}</p>
@@ -387,7 +387,7 @@ export default function Home() {
             {copy.local.partners.map((partner) => (
               <div
                 key={partner}
-                className="glass flex items-center justify-center px-4 py-8 text-center text-sm font-semibold text-deepteal/70"
+                className="glass flex items-center justify-center px-4 py-8 text-center text-sm font-semibold text-deepteal bg-seafoam/10"
               >
                 {partner}
               </div>
@@ -403,7 +403,7 @@ export default function Home() {
               <p className="section-kicker">{copy.visit.kicker}</p>
               <h2 className="section-title">{copy.visit.title}</h2>
             </div>
-            <div className="rounded-2xl border border-deepteal/10 bg-white/70 px-5 py-4 text-sm font-medium text-deepteal/70">
+            <div className="rounded-2xl border border-seafoam/40 bg-seafoam/10 px-5 py-4 text-sm font-medium text-deepteal">
               {copy.visit.comingSoon}
             </div>
             <div className="grid gap-6 md:grid-cols-3">
@@ -439,7 +439,7 @@ export default function Home() {
             </div>
             <p className="text-sm text-deepteal/60">{copy.visit.note}</p>
           </div>
-          <p className="text-center text-lg font-semibold uppercase tracking-[0.2em] text-deepteal/80">
+          <p className="text-center text-lg font-semibold uppercase tracking-[0.2em] text-seafoam">
             {copy.visit.tagline}
           </p>
         </div>

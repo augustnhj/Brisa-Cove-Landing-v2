@@ -71,7 +71,7 @@ const t = {
       },
       location: { label: "Find us", value: "Haviksanden Beach, Lista, Norway" },
       booking: { label: "Bookings", value: "sondreeikeland@brisacove.no" },
-      social: { label: "Follow us" },
+      social: { label: "Follow us", comingSoon: "More posts coming soon" },
       contact: { label: "Contact" },
       ctaMenu: "See menu",
       ctaBook: "Book event",
@@ -141,7 +141,7 @@ const t = {
       },
       location: { label: "Findet uns", value: "Haviksanden Strand, Lista, Norwegen" },
       booking: { label: "Buchungen", value: "sondreeikeland@brisacove.no" },
-      social: { label: "Folgt uns" },
+      social: { label: "Folgt uns", comingSoon: "Mehr Beiträge kommen bald" },
       contact: { label: "Kontakt" },
       ctaMenu: "Menü ansehen",
       ctaBook: "Event buchen",
@@ -211,7 +211,7 @@ const t = {
       },
       location: { label: "Finn oss", value: "Haviksanden strand, Lista, Norge" },
       booking: { label: "Bestillinger", value: "sondreeikeland@brisacove.no" },
-      social: { label: "Følg oss" },
+      social: { label: "Følg oss", comingSoon: "Flere innlegg kommer snart" },
       contact: { label: "Kontakt" },
       ctaMenu: "Se meny",
       ctaBook: "Book arrangement",
@@ -434,6 +434,7 @@ export default function Home() {
                   <span className="text-deepteal/30">·</span>
                   <a href="https://www.facebook.com/profile.php?id=61583727041867" target="_blank" rel="noopener noreferrer" className="text-base text-deepteal hover:text-seafoam transition-colors font-medium">Facebook</a>
                 </div>
+                <p className="mt-1.5 text-xs text-deepteal/50 italic">{copy.visit.social.comingSoon}</p>
               </div>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">

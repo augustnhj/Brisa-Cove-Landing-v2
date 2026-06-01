@@ -25,28 +25,28 @@ export type EventInfo = {
 
 export const nextEvent: EventInfo = {
   en: {
-    title: "Sunset Surf Social",
+    title: "Opening Day",
     description:
-      "Group surf session, beach bites, and a live acoustic set as the sun goes down.",
-    ctaLabel: "RSVP for the event",
+      "Join us for the grand opening of Brisa Cove — food, surf, and good vibes at Haviksanden beach.",
+    ctaLabel: "Join us",
     kickerLabel: "Next event",
   },
   no: {
-    title: "Solnedgang Surf Social",
+    title: "Åpningsdag",
     description:
-      "Felles surfsesjon, strandmat og et live akustisk sett mens solen går ned.",
-    ctaLabel: "Meld deg på arrangementet",
+      "Bli med på den store åpningen av Brisa Cove — mat, surf og god stemning på Haviksanden.",
+    ctaLabel: "Bli med",
     kickerLabel: "Neste arrangement",
   },
   de: {
-    title: "Sonnenuntergang Surf Social",
+    title: "Eröffnungstag",
     description:
-      "Gemeinsame Surfsession, Strandsnacks und ein Live-Akustikset, während die Sonne untergeht.",
-    ctaLabel: "Für das Event anmelden",
+      "Feiert mit uns die Eröffnung von Brisa Cove — Essen, Surfen und gute Stimmung am Haviksanden-Strand.",
+    ctaLabel: "Dabei sein",
     kickerLabel: "Nächstes Event",
   },
-  date: "June 21, 2026",
-  time: "16:00–20:00",
+  date: "June 6, 2026",
+  time: "11:30–23:30",
   ctaHref: "#visit",
   location: "Haviksanden Beach, Lista",
 };

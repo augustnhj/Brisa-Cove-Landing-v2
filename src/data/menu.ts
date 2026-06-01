@@ -11,7 +11,7 @@ export type MenuItem = {
   description: string;
   nutrition: Nutrition;
   price: string;
-  image: string;
+  comingSoon?: boolean;
 };
 
 export type MenuSection = {
@@ -38,12 +38,6 @@ export const menuNotes: Record<MenuLanguage, string> = {
   no: "Næringsverdier er estimater og kan variere.",
 };
 
-const imagePalette = {
-  warm: "/images/favorite-1.jpg",
-  spice: "/images/favorite-2.jpg",
-  fresh: "/images/favorite-3.jpg",
-  bold: "/images/favorite-4.jpg",
-};
 
 export const menuSections: Record<MenuLanguage, MenuSection[]> = {
   en: [
@@ -56,7 +50,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Crispy fries, lime aioli",
           nutrition: { kcal: "520", protein: "4 g", fat: "37 g", carbs: "41 g" },
           price: "79 kr",
-          image: imagePalette.warm,
         },
         {
           id: "sunset-sweet-fries",
@@ -64,7 +57,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Sweet potato fries, lime aioli",
           nutrition: { kcal: "560", protein: "4 g", fat: "36 g", carbs: "52 g" },
           price: "89 kr",
-          image: imagePalette.warm,
         },
       ],
     },
@@ -77,7 +69,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Chicken wings, sweet chili, lime",
           nutrition: { kcal: "660", protein: "54 g", fat: "45 g", carbs: "16 g" },
           price: "149 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "reef-bbq-wings",
@@ -85,7 +77,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Chicken wings, BBQ glaze",
           nutrition: { kcal: "650", protein: "54 g", fat: "45 g", carbs: "12 g" },
           price: "145 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "lava-sriracha-honey-wings",
@@ -93,7 +85,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Chicken wings, sriracha, honey",
           nutrition: { kcal: "760", protein: "54 g", fat: "52 g", carbs: "26 g" },
           price: "155 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
       ],
     },
@@ -106,7 +98,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Nachos, cheddar, salsa, jalapeños",
           nutrition: { kcal: "820", protein: "16 g", fat: "48 g", carbs: "78 g" },
           price: "139 kr",
-          image: imagePalette.warm,
         },
       ],
     },
@@ -119,7 +110,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Skyr, berries, banana, granola",
           nutrition: { kcal: "600", protein: "28 g", fat: "16 g", carbs: "88 g" },
           price: "139 kr",
-          image: imagePalette.fresh,
         },
         {
           id: "mango-wave-bowl",
@@ -127,7 +117,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Skyr, mango, banana, granola",
           nutrition: { kcal: "570", protein: "25 g", fat: "9 g", carbs: "95 g" },
           price: "135 kr",
-          image: imagePalette.fresh,
         },
         {
           id: "acai-anchor-bowl",
@@ -135,7 +124,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Açaí, banana, berries, granola",
           nutrition: { kcal: "650", protein: "10 g", fat: "28 g", carbs: "90 g" },
           price: "169 kr",
-          image: imagePalette.fresh,
         },
       ],
     },
@@ -148,7 +136,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Mango, banana, pineapple juice",
           nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
           price: "89 kr",
-          image: imagePalette.fresh,
         },
       ],
     },
@@ -161,7 +148,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Banana bread",
           nutrition: { kcal: "230", protein: "5 g", fat: "9 g", carbs: "32 g" },
           price: "49 kr",
-          image: imagePalette.fresh,
+          comingSoon: true,
         },
       ],
     },
@@ -174,7 +161,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Chicken, mango, salad, coconut dressing",
           nutrition: { kcal: "760", protein: "45 g", fat: "38 g", carbs: "68 g" },
           price: "159 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "bali-avocado-toast",
@@ -182,7 +169,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Avocado, lime, chili, coriander",
           nutrition: { kcal: "430", protein: "8 g", fat: "25 g", carbs: "46 g" },
           price: "139 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "wave-rider-burger",
@@ -190,7 +177,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Burger, cheddar, salad, pickles",
           nutrition: { kcal: "780", protein: "38 g", fat: "48 g", carbs: "52 g" },
           price: "179 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
       ],
     },
@@ -203,7 +190,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Tomato sauce, cheese, basil",
           nutrition: { kcal: "1200", protein: "60 g", fat: "42 g", carbs: "130 g" },
           price: "179 kr",
-          image: imagePalette.bold,
         },
         {
           id: "pipeline-pepperoni",
@@ -211,15 +197,13 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Tomato sauce, cheese, pepperoni",
           nutrition: { kcal: "1500", protein: "75 g", fat: "70 g", carbs: "140 g" },
           price: "199 kr",
-          image: imagePalette.bold,
         },
         {
-          id: "bali-chicken-mango",
-          name: "Bali Chicken Mango",
-          description: "Chicken, mango, red onion, sweet chili",
-          nutrition: { kcal: "1450", protein: "85 g", fat: "45 g", carbs: "165 g" },
-          price: "199 kr",
-          image: imagePalette.bold,
+          id: "hawaii-pizza",
+          name: "Hang Ten Hawaiian",
+          description: "Tomato sauce, cheese, ham, pineapple",
+          nutrition: { kcal: "1300", protein: "65 g", fat: "40 g", carbs: "155 g" },
+          price: "189 kr",
         },
       ],
     },
@@ -232,7 +216,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Cold brew, coconut milk",
           nutrition: { kcal: "140", protein: "1 g", fat: "9 g", carbs: "14 g" },
           price: "69 kr",
-          image: imagePalette.bold,
         },
         {
           id: "pineapple-mint-cooler",
@@ -240,15 +223,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Pineapple juice, lime, mint",
           nutrition: { kcal: "110", protein: "0 g", fat: "0 g", carbs: "27 g" },
           price: "59 kr",
-          image: imagePalette.bold,
-        },
-        {
-          id: "slush",
-          name: "Slush",
-          description: "Flavor of the day",
-          nutrition: { kcal: "120-200", protein: "N/A", fat: "N/A", carbs: "N/A" },
-          price: "49 kr",
-          image: imagePalette.bold,
         },
       ],
     },
@@ -263,7 +237,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Sprø pommes frites, lime-aioli",
           nutrition: { kcal: "520", protein: "4 g", fat: "37 g", carbs: "41 g" },
           price: "79 kr",
-          image: imagePalette.warm,
         },
         {
           id: "sunset-sweet-fries",
@@ -271,7 +244,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Søtpotetfries, lime-aioli",
           nutrition: { kcal: "560", protein: "4 g", fat: "36 g", carbs: "52 g" },
           price: "89 kr",
-          image: imagePalette.warm,
         },
       ],
     },
@@ -284,7 +256,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Kyllingvinger, sweet chili, lime",
           nutrition: { kcal: "660", protein: "54 g", fat: "45 g", carbs: "16 g" },
           price: "149 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "reef-bbq-wings",
@@ -292,7 +264,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Kyllingvinger, BBQ-glaze",
           nutrition: { kcal: "650", protein: "54 g", fat: "45 g", carbs: "12 g" },
           price: "145 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "lava-sriracha-honey-wings",
@@ -300,7 +272,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Kyllingvinger, sriracha, honning",
           nutrition: { kcal: "760", protein: "54 g", fat: "52 g", carbs: "26 g" },
           price: "155 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
       ],
     },
@@ -313,7 +285,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Nachos, cheddar, salsa, jalapeños",
           nutrition: { kcal: "820", protein: "16 g", fat: "48 g", carbs: "78 g" },
           price: "139 kr",
-          image: imagePalette.warm,
         },
       ],
     },
@@ -326,7 +297,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Skyr, bær, banan, granola",
           nutrition: { kcal: "600", protein: "28 g", fat: "16 g", carbs: "88 g" },
           price: "139 kr",
-          image: imagePalette.fresh,
         },
         {
           id: "mango-wave-bowl",
@@ -334,7 +304,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Skyr, mango, banan, granola",
           nutrition: { kcal: "570", protein: "25 g", fat: "9 g", carbs: "95 g" },
           price: "135 kr",
-          image: imagePalette.fresh,
         },
         {
           id: "acai-anchor-bowl",
@@ -342,7 +311,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Açaí, banan, bær, granola",
           nutrition: { kcal: "650", protein: "10 g", fat: "28 g", carbs: "90 g" },
           price: "169 kr",
-          image: imagePalette.fresh,
         },
       ],
     },
@@ -355,7 +323,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Mango, banan, ananasjuice",
           nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
           price: "89 kr",
-          image: imagePalette.fresh,
         },
       ],
     },
@@ -368,7 +335,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Bananbrød",
           nutrition: { kcal: "230", protein: "5 g", fat: "9 g", carbs: "32 g" },
           price: "49 kr",
-          image: imagePalette.fresh,
+          comingSoon: true,
         },
       ],
     },
@@ -381,7 +348,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Kylling, mango, salat, kokosdressing",
           nutrition: { kcal: "760", protein: "45 g", fat: "38 g", carbs: "68 g" },
           price: "159 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "bali-avocado-toast",
@@ -389,7 +356,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Avokado, lime, chili, koriander",
           nutrition: { kcal: "430", protein: "8 g", fat: "25 g", carbs: "46 g" },
           price: "139 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
         {
           id: "wave-rider-burger",
@@ -397,7 +364,7 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Burger, cheddar, salat, pickles",
           nutrition: { kcal: "780", protein: "38 g", fat: "48 g", carbs: "52 g" },
           price: "179 kr",
-          image: imagePalette.spice,
+          comingSoon: true,
         },
       ],
     },
@@ -410,7 +377,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Tomatsaus, ost, basilikum",
           nutrition: { kcal: "1200", protein: "60 g", fat: "42 g", carbs: "130 g" },
           price: "179 kr",
-          image: imagePalette.bold,
         },
         {
           id: "pipeline-pepperoni",
@@ -418,15 +384,13 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Tomatsaus, ost, pepperoni",
           nutrition: { kcal: "1500", protein: "75 g", fat: "70 g", carbs: "140 g" },
           price: "199 kr",
-          image: imagePalette.bold,
         },
         {
-          id: "bali-chicken-mango",
-          name: "Bali Chicken Mango",
-          description: "Kylling, mango, rødløk, sweet chili",
-          nutrition: { kcal: "1450", protein: "85 g", fat: "45 g", carbs: "165 g" },
-          price: "199 kr",
-          image: imagePalette.bold,
+          id: "hawaii-pizza",
+          name: "Hang Ten Hawaiian",
+          description: "Tomatsaus, ost, skinke, ananas",
+          nutrition: { kcal: "1300", protein: "65 g", fat: "40 g", carbs: "155 g" },
+          price: "189 kr",
         },
       ],
     },
@@ -439,7 +403,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Cold brew, kokosmelk",
           nutrition: { kcal: "140", protein: "1 g", fat: "9 g", carbs: "14 g" },
           price: "69 kr",
-          image: imagePalette.bold,
         },
         {
           id: "pineapple-mint-cooler",
@@ -447,15 +410,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Ananasjuice, lime, mynte",
           nutrition: { kcal: "110", protein: "0 g", fat: "0 g", carbs: "27 g" },
           price: "59 kr",
-          image: imagePalette.bold,
-        },
-        {
-          id: "slush",
-          name: "Slush",
-          description: "Dagens smak",
-          nutrition: { kcal: "120-200", protein: "N/A", fat: "N/A", carbs: "N/A" },
-          price: "49 kr",
-          image: imagePalette.bold,
         },
       ],
     },
@@ -463,10 +417,10 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
 };
 
 const favoriteIds = [
-  "riptide-fries",
-  "sunset-sweet-chili-wings",
+  "pipeline-pepperoni",
+  "nacho-shore-platter",
   "bali-berry-bowl",
-  "sunset-margherita",
+  "pineapple-mint-cooler",
 ];
 
 const buildFavorites = (sections: MenuSection[]) => {

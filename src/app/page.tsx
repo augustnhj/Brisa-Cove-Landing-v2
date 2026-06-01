@@ -34,7 +34,7 @@ const t = {
     },
     hero: {
       kicker: "Opening Summer 2026",
-      title: "The beach cafe where surf and good vibes meet",
+      title: "Grab a bite at the heart of Norwegian surfing",
       description:
         "Simple and delicious food, relaxed atmosphere – a natural meeting point on the beach.",
       ctaPrimary: "See menu",
@@ -105,7 +105,7 @@ const t = {
     },
     hero: {
       kicker: "Eröffnung Sommer 2026",
-      title: "Das Strandcafé, wo Surf und gute Stimmung aufeinandertreffen",
+      title: "Ein Happen mitten im Herz des norwegischen Surfens",
       description:
         "Einfaches und köstliches Essen, entspannte Atmosphäre – ein natürlicher Treffpunkt am Strand.",
       ctaPrimary: "Menü ansehen",
@@ -176,7 +176,7 @@ const t = {
     },
     hero: {
       kicker: "Åpner sommeren 2026",
-      title: "Strandcafeen der surf og god stemning møtes",
+      title: "Få en matbit i hjertet av norsk surfing",
       description:
         "Enkel og deilig mat, avslappet atmosfære – et naturlig møtepunkt på stranden.",
       ctaPrimary: "Se meny",

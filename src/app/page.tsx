@@ -7,20 +7,6 @@ import NextEventSection from "@/components/NextEventSection";
 import LanguageSlider from "@/components/LanguageSlider";
 import { useLanguage } from "@/context/LanguageContext";
 
-const experienceImages = [
-  {
-    src: "/images/choose-between-inside.jpg",
-    alt: "Beach cafe hangout atmosphere",
-  },
-  {
-    src: "/images/surf-community.jpeg",
-    alt: "Surf session and community vibes",
-  },
-  {
-    src: "/images/cafe-outside.jpg",
-    alt: "Brisa Cove cafe front in summer light",
-  },
-];
 
 const t = {
   en: {
@@ -349,21 +335,14 @@ export default function Home() {
               {copy.experience.description}
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {experienceImages.map((image) => (
-              <div
-                key={image.src}
-                className="relative h-48 overflow-hidden rounded-3xl border border-white/70 md:h-56"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-            ))}
+          <div className="relative h-72 overflow-hidden rounded-3xl border border-white/70 sm:h-96">
+            <Image
+              src="/images/surf-community.jpeg"
+              alt="Surf session and community vibes"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
           </div>
         </div>
       </section>

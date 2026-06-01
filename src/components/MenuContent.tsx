@@ -9,12 +9,17 @@ const copy = {
   en: {
     kicker: "Full menu",
     title: "Brisa Cove menu",
-    note: "Nutritional values are estimates and may vary. Menu defaults to English, with Norsk available via the toggle.",
+    note: "Nutritional values are estimates and may vary.",
   },
   no: {
     kicker: "Full meny",
     title: "Brisa Cove meny",
-    note: "Næringsverdier er estimater og kan variere. Menyen åpner på engelsk, med Norsk tilgjengelig.",
+    note: "Næringsverdier er estimater og kan variere.",
+  },
+  de: {
+    kicker: "Vollständige Speisekarte",
+    title: "Brisa Cove Speisekarte",
+    note: "Nährwerte sind Schätzungen und können variieren.",
   },
 };
 

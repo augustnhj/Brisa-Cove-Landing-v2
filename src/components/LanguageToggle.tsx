@@ -5,6 +5,7 @@ import { MenuLanguage } from "@/data/menu";
 const options: { label: string; value: MenuLanguage }[] = [
   { label: "English", value: "en" },
   { label: "Norsk", value: "no" },
+  { label: "Deutsch", value: "de" },
 ];
 
 export default function LanguageToggle({

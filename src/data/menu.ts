@@ -19,7 +19,7 @@ export type MenuSection = {
   items: MenuItem[];
 };
 
-export type MenuLanguage = "en" | "no";
+export type MenuLanguage = "en" | "no" | "de";
 
 export type NutritionLabels = {
   kcal: string;
@@ -31,11 +31,13 @@ export type NutritionLabels = {
 export const nutritionLabels: Record<MenuLanguage, NutritionLabels> = {
   en: { kcal: "Kcal", protein: "Protein", fat: "Fat", carbs: "Carbs" },
   no: { kcal: "kcal", protein: "Protein", fat: "Fett", carbs: "Karbo" },
+  de: { kcal: "kcal", protein: "Eiweiß", fat: "Fett", carbs: "Kohlenhydrate" },
 };
 
 export const menuNotes: Record<MenuLanguage, string> = {
   en: "Nutritional values are estimates and may vary.",
   no: "Næringsverdier er estimater og kan variere.",
+  de: "Nährwerte sind Schätzungen und können variieren.",
 };
 
 
@@ -414,6 +416,193 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
   ],
+  de: [
+    {
+      title: "AIRFRYER",
+      items: [
+        {
+          id: "riptide-fries",
+          name: "Riptide Fries",
+          description: "Knusprige Pommes, Limetten-Aioli",
+          nutrition: { kcal: "520", protein: "4 g", fat: "37 g", carbs: "41 g" },
+          price: "79 kr",
+        },
+        {
+          id: "sunset-sweet-fries",
+          name: "Sunset Sweet Fries",
+          description: "Süßkartoffelpommes, Limetten-Aioli",
+          nutrition: { kcal: "560", protein: "4 g", fat: "36 g", carbs: "52 g" },
+          price: "89 kr",
+        },
+      ],
+    },
+    {
+      title: "CHICKEN WINGS",
+      items: [
+        {
+          id: "sunset-sweet-chili-wings",
+          name: "Sunset Sweet-Chili Wings",
+          description: "Chicken Wings, Sweet Chili, Limette",
+          nutrition: { kcal: "660", protein: "54 g", fat: "45 g", carbs: "16 g" },
+          price: "149 kr",
+          comingSoon: true,
+        },
+        {
+          id: "reef-bbq-wings",
+          name: "Reef BBQ Wings",
+          description: "Chicken Wings, BBQ-Glasur",
+          nutrition: { kcal: "650", protein: "54 g", fat: "45 g", carbs: "12 g" },
+          price: "145 kr",
+          comingSoon: true,
+        },
+        {
+          id: "lava-sriracha-honey-wings",
+          name: "Lava Sriracha-Honey Wings",
+          description: "Chicken Wings, Sriracha, Honig",
+          nutrition: { kcal: "760", protein: "54 g", fat: "52 g", carbs: "26 g" },
+          price: "155 kr",
+          comingSoon: true,
+        },
+      ],
+    },
+    {
+      title: "NACHOS",
+      items: [
+        {
+          id: "nacho-shore-platter",
+          name: "Nacho Shore Platter",
+          description: "Nachos, Cheddar, Salsa, Jalapeños",
+          nutrition: { kcal: "820", protein: "16 g", fat: "48 g", carbs: "78 g" },
+          price: "139 kr",
+        },
+      ],
+    },
+    {
+      title: "SMOOTHIE BOWLS",
+      items: [
+        {
+          id: "bali-berry-bowl",
+          name: "Bali Berry Bowl",
+          description: "Skyr, Beeren, Banane, Granola",
+          nutrition: { kcal: "600", protein: "28 g", fat: "16 g", carbs: "88 g" },
+          price: "139 kr",
+        },
+        {
+          id: "mango-wave-bowl",
+          name: "Mango Wave Bowl",
+          description: "Skyr, Mango, Banane, Granola",
+          nutrition: { kcal: "570", protein: "25 g", fat: "9 g", carbs: "95 g" },
+          price: "135 kr",
+        },
+        {
+          id: "acai-anchor-bowl",
+          name: "Açaí Anchor Bowl",
+          description: "Açaí, Banane, Beeren, Granola",
+          nutrition: { kcal: "650", protein: "10 g", fat: "28 g", carbs: "90 g" },
+          price: "169 kr",
+        },
+      ],
+    },
+    {
+      title: "SMOOTHIES",
+      items: [
+        {
+          id: "sunrise-mango-smoothie",
+          name: "Sunrise Mango Smoothie",
+          description: "Mango, Banane, Ananassaft",
+          nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
+          price: "89 kr",
+        },
+      ],
+    },
+    {
+      title: "SÜSSES",
+      items: [
+        {
+          id: "banana-boardwalk-bread",
+          name: "Banana Boardwalk Bread",
+          description: "Bananenbrot",
+          nutrition: { kcal: "230", protein: "5 g", fat: "9 g", carbs: "32 g" },
+          price: "49 kr",
+          comingSoon: true,
+        },
+      ],
+    },
+    {
+      title: "GRILLPLATTE",
+      items: [
+        {
+          id: "coconut-chicken-wrap",
+          name: "Coconut Chicken Wrap",
+          description: "Hähnchen, Mango, Salat, Kokosdressing",
+          nutrition: { kcal: "760", protein: "45 g", fat: "38 g", carbs: "68 g" },
+          price: "159 kr",
+          comingSoon: true,
+        },
+        {
+          id: "bali-avocado-toast",
+          name: "Bali Avocado Toast",
+          description: "Avocado, Limette, Chili, Koriander",
+          nutrition: { kcal: "430", protein: "8 g", fat: "25 g", carbs: "46 g" },
+          price: "139 kr",
+          comingSoon: true,
+        },
+        {
+          id: "wave-rider-burger",
+          name: "Wave Rider Burger",
+          description: "Burger, Cheddar, Salat, Pickles",
+          nutrition: { kcal: "780", protein: "38 g", fat: "48 g", carbs: "52 g" },
+          price: "179 kr",
+          comingSoon: true,
+        },
+      ],
+    },
+    {
+      title: "PIZZA",
+      items: [
+        {
+          id: "sunset-margherita",
+          name: "Sunset Margherita",
+          description: "Tomatensauce, Käse, Basilikum",
+          nutrition: { kcal: "1200", protein: "60 g", fat: "42 g", carbs: "130 g" },
+          price: "179 kr",
+        },
+        {
+          id: "pipeline-pepperoni",
+          name: "Pipeline Pepperoni",
+          description: "Tomatensauce, Käse, Peperoni",
+          nutrition: { kcal: "1500", protein: "75 g", fat: "70 g", carbs: "140 g" },
+          price: "199 kr",
+        },
+        {
+          id: "hawaii-pizza",
+          name: "Hang Ten Hawaiian",
+          description: "Tomatensauce, Käse, Schinken, Ananas",
+          nutrition: { kcal: "1300", protein: "65 g", fat: "40 g", carbs: "155 g" },
+          price: "189 kr",
+        },
+      ],
+    },
+    {
+      title: "GETRÄNKE",
+      items: [
+        {
+          id: "coconut-cold-brew",
+          name: "Coconut Cold Brew",
+          description: "Cold Brew, Kokosmilch",
+          nutrition: { kcal: "140", protein: "1 g", fat: "9 g", carbs: "14 g" },
+          price: "69 kr",
+        },
+        {
+          id: "pineapple-mint-cooler",
+          name: "Pineapple Mint Cooler",
+          description: "Ananassaft, Limette, Minze",
+          nutrition: { kcal: "110", protein: "0 g", fat: "0 g", carbs: "27 g" },
+          price: "59 kr",
+        },
+      ],
+    },
+  ],
 };
 
 const favoriteIds = [
@@ -433,4 +622,5 @@ const buildFavorites = (sections: MenuSection[]) => {
 export const favorites: Record<MenuLanguage, MenuItem[]> = {
   en: buildFavorites(menuSections.en),
   no: buildFavorites(menuSections.no),
+  de: buildFavorites(menuSections.de),
 };

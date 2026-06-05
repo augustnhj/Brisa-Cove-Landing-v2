@@ -53,7 +53,7 @@ export default function MenuCard({
         {allergens !== undefined && (
           <div className="border-t border-deepteal/10 pt-3 text-xs text-deepteal/60">
             <span className="font-semibold uppercase tracking-[0.15em]">{labels.allergens}: </span>
-            {allergens.length > 0 ? allergens.join(", ") : labels.none}
+            {allergens.length > 0 ? allergens.map((a) => labels.allergenNames[a] ?? a).join(", ") : labels.none}
           </div>
         )}
       </div>

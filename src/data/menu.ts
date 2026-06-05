@@ -28,12 +28,16 @@ export type NutritionLabels = {
   carbs: string;
   allergens: string;
   none: string;
+  allergenNames: Record<string, string>;
 };
 
 export const nutritionLabels: Record<MenuLanguage, NutritionLabels> = {
-  en: { kcal: "Kcal", protein: "Protein", fat: "Fat", carbs: "Carbs", allergens: "Allergens", none: "None" },
-  no: { kcal: "kcal", protein: "Protein", fat: "Fett", carbs: "Karbo", allergens: "Allergener", none: "Ingen" },
-  de: { kcal: "kcal", protein: "Eiweiß", fat: "Fett", carbs: "Kohlenhydrate", allergens: "Allergene", none: "Keine" },
+  en: { kcal: "Kcal", protein: "Protein", fat: "Fat", carbs: "Carbs", allergens: "Allergens", none: "None",
+    allergenNames: { Egg: "Egg", Milk: "Milk", Gluten: "Gluten", Soya: "Soya" } },
+  no: { kcal: "kcal", protein: "Protein", fat: "Fett", carbs: "Karbo", allergens: "Allergener", none: "Ingen",
+    allergenNames: { Egg: "Egg", Milk: "Melk", Gluten: "Gluten", Soya: "Soya" } },
+  de: { kcal: "kcal", protein: "Eiweiß", fat: "Fett", carbs: "Kohlenhydrate", allergens: "Allergene", none: "Keine",
+    allergenNames: { Egg: "Ei", Milk: "Milch", Gluten: "Gluten", Soya: "Soja" } },
 };
 
 export const itemAllergens: Record<string, string[]> = {

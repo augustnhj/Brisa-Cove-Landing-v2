@@ -28,8 +28,7 @@ const copy = {
 
 export default function FavoritesSection() {
   const { language } = useLanguage();
-  // Menu data only has EN/NO; fall back to English for German
-  const lang: MenuLanguage = language === "de" ? "en" : language;
+  const lang: MenuLanguage = language;
   const labels = nutritionLabels[lang];
   const text = copy[language];
 
@@ -42,7 +41,7 @@ export default function FavoritesSection() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {favorites[lang].map((item) => (
-            <MenuCard key={item.id} item={item} labels={labels} />
+            <MenuCard key={item.id} item={item} labels={labels} alignBottom />
           ))}
         </div>
         <div className="flex flex-wrap items-center gap-4">

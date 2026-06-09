@@ -22,7 +22,8 @@ export default function MenuCard({
     "hawaii-pizza", "sunset-margherita-small", "pipeline-pepperoni-small",
     "hawaii-pizza-small",
   ]);
-  const showDetails = !item.comingSoon && item.id !== "soda";
+  const SIMPLE_IDS = new Set(["soda", "coffee"]);
+  const showDetails = !item.comingSoon && !SIMPLE_IDS.has(item.id);
   const showNutrition = showDetails && !NO_NUTRITION_IDS.has(item.id);
   const allergens = showDetails ? itemAllergens[item.id] : undefined;
 

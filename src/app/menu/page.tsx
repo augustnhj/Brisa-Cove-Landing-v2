@@ -29,7 +29,9 @@ export default function MenuPage() {
             Visit Brisa Cove
           </Link>
           <a
-            href="/menu.pdf"
+            href="/menu/print"
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-primary"
             aria-label="Download full menu PDF"
           >

@@ -67,7 +67,7 @@ const t = {
       title: "Plan your beach day",
       hours: {
         label: "Opening hours",
-        value: "Wednesday  11:30–21:30\nFriday  11:30–23:30\nSaturday  11:30–23:30\nSunday  11:30–21:30",
+        value: "Wednesday  11:30–20:00\nFriday  11:30–20:00\nSaturday  11:30–20:00\nSunday  09:30–20:00",
       },
       location: { label: "Find us", value: "Haviksanden Beach, Lista, Norway" },
       booking: { label: "Bookings", value: "sondreeikeland@brisacove.no" },
@@ -137,7 +137,7 @@ const t = {
       title: "Plant euren Strandtag",
       hours: {
         label: "Öffnungszeiten",
-        value: "Mittwoch  11:30–21:30\nFreitag  11:30–23:30\nSamstag  11:30–23:30\nSonntag  11:30–21:30",
+        value: "Mittwoch  11:30–20:00\nFreitag  11:30–20:00\nSamstag  11:30–20:00\nSonntag  09:30–20:00",
       },
       location: { label: "Findet uns", value: "Haviksanden Strand, Lista, Norwegen" },
       booking: { label: "Buchungen", value: "sondreeikeland@brisacove.no" },
@@ -207,7 +207,7 @@ const t = {
       title: "Planlegg stranddagen din",
       hours: {
         label: "Åpningstider",
-        value: "Onsdag  11:30–21:30\nFredag  11:30–23:30\nLørdag  11:30–23:30\nSøndag  11:30–21:30",
+        value: "Onsdag  11:30–20:00\nFredag  11:30–20:00\nLørdag  11:30–20:00\nSøndag  09:30–20:00",
       },
       location: { label: "Finn oss", value: "Haviksanden strand, Lista, Norge" },
       booking: { label: "Bestillinger", value: "sondreeikeland@brisacove.no" },

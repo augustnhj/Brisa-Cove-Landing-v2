@@ -4,18 +4,21 @@ export type EventInfo = {
     description: string;
     ctaLabel: string;
     kickerLabel: string;
+    notice?: string;
   };
   no: {
     title: string;
     description: string;
     ctaLabel: string;
     kickerLabel: string;
+    notice?: string;
   };
   de: {
     title: string;
     description: string;
     ctaLabel: string;
     kickerLabel: string;
+    notice?: string;
   };
   date: string;
   time: string;
@@ -25,28 +28,28 @@ export type EventInfo = {
 
 export const nextEvent: EventInfo = {
   en: {
-    title: "Opening Day",
+    title: "Friday Nights at Brisa Cove",
     description:
-      "Join us for the grand opening of Brisa Cove — food, surf, and good vibes at Haviksanden beach.",
-    ctaLabel: "Join us",
-    kickerLabel: "Next event",
+      "From July 1st we're (pending permission) serving alcohol every Friday — and we'll be running events and arrangements to make your beach Fridays something to look forward to. Stay tuned.",
+    ctaLabel: "Follow us for updates",
+    kickerLabel: "Coming up",
   },
   no: {
-    title: "Åpningsdag",
+    title: "Fredagskvelder på Brisa Cove",
     description:
-      "Bli med på den store åpningen av Brisa Cove — mat, surf og god stemning på Haviksanden.",
-    ctaLabel: "Bli med",
-    kickerLabel: "Neste arrangement",
+      "Fra 1. juli serverer vi (under forutsetning av tillatelse) alkohol hver fredag — og vi planlegger arrangementer for å gjøre fredagene dine på stranden til noe å glede seg til. Følg med!",
+    ctaLabel: "Følg oss for oppdateringer",
+    kickerLabel: "Kommer snart",
   },
   de: {
-    title: "Eröffnungstag",
+    title: "Freitagsabende bei Brisa Cove",
     description:
-      "Feiert mit uns die Eröffnung von Brisa Cove — Essen, Surfen und gute Stimmung am Haviksanden-Strand.",
-    ctaLabel: "Dabei sein",
-    kickerLabel: "Nächstes Event",
+      "Ab dem 1. Juli servieren wir (vorbehaltlich Genehmigung) jeden Freitag Alkohol — und wir planen Events, um eure Freitage am Strand zu etwas Besonderem zu machen. Bleibt dran!",
+    ctaLabel: "Folgt uns für Updates",
+    kickerLabel: "Demnächst",
   },
-  date: "June 6, 2026",
-  time: "11:30–23:30",
-  ctaHref: "#visit",
+  date: "From 1 July 2026",
+  time: "Every Friday",
+  ctaHref: "https://www.instagram.com/brisacove/",
   location: "Haviksanden Beach, Lista",
 };

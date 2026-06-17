@@ -312,9 +312,6 @@ export default function Home() {
         {/* Hero text at bottom of image */}
         <div className="absolute inset-x-0 bottom-0 z-20 px-6 pb-12 sm:px-10 sm:pb-16">
           <div className="mx-auto w-full max-w-6xl">
-            <p className="mb-2 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-white/75 drop-shadow-sm">
-              {copy.hero.kicker}
-            </p>
             <h1
               lang={language}
               className="mb-3 font-display text-3xl font-semibold tracking-tight text-white [hyphens:auto] [text-shadow:0_2px_16px_rgba(0,0,0,0.65)] sm:text-4xl md:text-5xl"

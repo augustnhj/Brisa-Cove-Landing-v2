@@ -254,6 +254,13 @@ const t = {
   },
 };
 
+// TEMP: remove after 26 June 2026
+const CLOSURE_NOTICE = {
+  en: "We will be closed Friday 26th of June.",
+  no: "Vi holder stengt fredag 26. juni.",
+  de: "Wir sind am Freitag, den 26. Juni geschlossen.",
+};
+
 export default function Home() {
   const { language } = useLanguage();
   const copy = t[language];
@@ -368,6 +375,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            {/* TEMP: remove after 26 June 2026 */}
+            <p className="rounded-lg border border-amber-300 bg-amber-50 px-4 py-2.5 text-sm font-medium text-amber-800">
+              {CLOSURE_NOTICE[language]}
+            </p>
           </div>
           <div className="glass flex flex-col gap-6 p-8">
             <div>

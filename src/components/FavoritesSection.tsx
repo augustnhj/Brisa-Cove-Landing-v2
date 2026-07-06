@@ -41,7 +41,7 @@ export default function FavoritesSection() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {favorites[lang].map((item) => (
-            <MenuCard key={item.id} item={item} labels={labels} alignBottom />
+            <MenuCard key={item.id} item={item} labels={labels} alignBottom imageTop />
           ))}
         </div>
         <div className="flex flex-wrap items-center gap-4">

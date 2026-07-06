@@ -12,10 +12,12 @@ export default function MenuCard({
   item,
   labels,
   alignBottom = false,
+  imageTop = false,
 }: {
   item: MenuItem;
   labels: NutritionLabels;
   alignBottom?: boolean;
+  imageTop?: boolean;
 }) {
   const NO_NUTRITION_IDS = new Set([
     "riptide-fries", "sunset-sweet-fries", "nacho-shore-platter",
@@ -28,6 +30,41 @@ export default function MenuCard({
   const showNutrition = showDetails && !NO_NUTRITION_IDS.has(item.id);
   const allergens = showDetails ? itemAllergens[item.id] : undefined;
   const image = itemImages[item.id];
+
+  if (imageTop && image) {
+    return (
+      <div className="glass flex h-full flex-col overflow-hidden">
+        <div className="relative h-52 w-full shrink-0">
+          <Image
+            src={image}
+            alt={item.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 25vw"
+          />
+        </div>
+        <div className="flex flex-1 flex-col justify-between gap-3 p-5">
+          <div className="flex flex-col gap-1.5">
+            <h3 className={`text-xl font-bold text-deepteal ${item.comingSoon ? "line-through decoration-red-600 decoration-2" : ""}`}>
+              {item.name}
+            </h3>
+            {item.comingSoon && (
+              <p className="text-xs font-bold uppercase tracking-widest text-red-600">Coming Soon</p>
+            )}
+            {showDetails && <p className="text-sm text-deepteal/60">{item.description}</p>}
+            {allergens !== undefined && (
+              <p className="mt-1 text-xs text-deepteal/50">
+                <span className="font-semibold uppercase tracking-[0.12em]">{labels.allergens}: </span>
+                {allergens.length > 0 ? allergens.map((a) => labels.allergenNames[a] ?? a).join(", ") : labels.none}
+              </p>
+            )}
+          </div>
+          {alignBottom && <div className="flex-1" />}
+          {!item.comingSoon && <span className="text-xl font-bold text-deepteal">{item.price}</span>}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="glass flex h-full overflow-hidden">

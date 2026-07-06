@@ -11,7 +11,6 @@ const t = {
   en: {
     nav: {
       experience: "Experience",
-      nextEvent: "Next Event",
       favorites: "Favorites",
       activities: "Surf & Activities",
       local: "Local",
@@ -92,7 +91,6 @@ const t = {
   de: {
     nav: {
       experience: "Erlebnis",
-      nextEvent: "Nächstes Event",
       favorites: "Favoriten",
       activities: "Surf & Aktivitäten",
       local: "Lokal",
@@ -173,7 +171,6 @@ const t = {
   no: {
     nav: {
       experience: "Opplevelse",
-      nextEvent: "Neste arrangement",
       favorites: "Favoritter",
       activities: "Surf & aktiviteter",
       local: "Lokalt",

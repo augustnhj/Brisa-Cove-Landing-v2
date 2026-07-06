@@ -40,6 +40,19 @@ export const nutritionLabels: Record<MenuLanguage, NutritionLabels> = {
     allergenNames: { Egg: "Ei", Milk: "Milch", Gluten: "Gluten", Soya: "Soja" } },
 };
 
+export const itemImages: Record<string, string> = {
+  "acai-anchor-bowl":           "/images/menu/Acai Anchor Bowl.png",
+  "mango-wave-bowl":            "/images/menu/Mango Wave Bowl.png",
+  "nacho-shore-platter":        "/images/menu/Nacho Shore Platter.png",
+  "pipeline-pepperoni":         "/images/menu/Pipeline Pepperoni.png",
+  "pipeline-pepperoni-small":   "/images/menu/Pipeline Pepperoni.png",
+  "hawaii-pizza":               "/images/menu/Hang Ten Hawaiian.png",
+  "hawaii-pizza-small":         "/images/menu/Hang Ten Hawaiian.png",
+  "maverick-meat-lovers":       "/images/menu/Maverick Meat Lovers.png",
+  "maverick-meat-lovers-small": "/images/menu/Maverick Meat Lovers.png",
+  "sunrise-mango-smoothie":     "/images/menu/Sunrise Mango Smoothie.png",
+};
+
 export const itemAllergens: Record<string, string[]> = {
   "riptide-fries":          [],
   "sunset-sweet-fries":     [],
@@ -51,11 +64,11 @@ export const itemAllergens: Record<string, string[]> = {
   "sunset-margherita":      ["Gluten", "Milk"],
   "pipeline-pepperoni":     ["Gluten", "Milk", "Soya"],
   "hawaii-pizza":           ["Gluten", "Milk"],
-  "coconut-cold-brew":         [],
-  "pineapple-mint-cooler":     [],
-  "sunset-margherita-small":   ["Gluten", "Milk"],
-  "pipeline-pepperoni-small":  ["Gluten", "Milk", "Soya"],
-  "hawaii-pizza-small":        ["Gluten", "Milk"],
+  "sunset-margherita-small":      ["Gluten", "Milk"],
+  "pipeline-pepperoni-small":     ["Gluten", "Milk", "Soya"],
+  "hawaii-pizza-small":           ["Gluten", "Milk"],
+  "maverick-meat-lovers":         ["Gluten", "Milk"],
+  "maverick-meat-lovers-small":   ["Gluten", "Milk"],
 };
 
 export const menuNotes: Record<MenuLanguage, string> = {
@@ -179,35 +192,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
     {
-      title: "GRIDDLE",
-      items: [
-        {
-          id: "coconut-chicken-wrap",
-          name: "Coconut Chicken Wrap",
-          description: "Chicken, mango, salad, coconut dressing",
-          nutrition: { kcal: "760", protein: "45 g", fat: "38 g", carbs: "68 g" },
-          price: "159 kr",
-          comingSoon: true,
-        },
-        {
-          id: "bali-avocado-toast",
-          name: "Bali Avocado Toast",
-          description: "Avocado, lime, chili, coriander",
-          nutrition: { kcal: "430", protein: "8 g", fat: "25 g", carbs: "46 g" },
-          price: "139 kr",
-          comingSoon: true,
-        },
-        {
-          id: "wave-rider-burger",
-          name: "Wave Rider Burger",
-          description: "Burger, cheddar, salad, pickles",
-          nutrition: { kcal: "780", protein: "38 g", fat: "48 g", carbs: "52 g" },
-          price: "179 kr",
-          comingSoon: true,
-        },
-      ],
-    },
-    {
       title: "PIZZA",
       items: [
         {
@@ -252,26 +236,31 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           nutrition: { kcal: "559", protein: "28 g", fat: "17 g", carbs: "67 g" },
           price: "179 kr",
         },
+        {
+          id: "maverick-meat-lovers",
+          name: "Maverick Meat Lovers",
+          description: "Tomato sauce, cheese, pepperoni, ham, beef",
+          nutrition: { kcal: "1650", protein: "85 g", fat: "78 g", carbs: "140 g" },
+          price: "249 kr",
+        },
+        {
+          id: "maverick-meat-lovers-small",
+          name: "Maverick Meat Lovers (Small)",
+          description: "Tomato sauce, cheese, pepperoni, ham, beef",
+          nutrition: { kcal: "710", protein: "37 g", fat: "34 g", carbs: "60 g" },
+          price: "199 kr",
+        },
       ],
     },
     {
       title: "DRINKS",
       items: [
         {
-          id: "coconut-cold-brew",
-          name: "Coconut Cold Brew",
-          description: "Cold brew, coconut milk",
-          nutrition: { kcal: "140", protein: "1 g", fat: "9 g", carbs: "14 g" },
-          price: "69 kr",
-          comingSoon: true,
-        },
-        {
-          id: "pineapple-mint-cooler",
-          name: "Pineapple Mint Cooler",
-          description: "Pineapple juice, lime, mint",
-          nutrition: { kcal: "110", protein: "0 g", fat: "0 g", carbs: "27 g" },
-          price: "59 kr",
-          comingSoon: true,
+          id: "sunrise-mango-smoothie",
+          name: "Sunrise Mango Smoothie",
+          description: "Mango, banana, pineapple juice",
+          nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
+          price: "79 kr",
         },
         {
           id: "soda",
@@ -403,35 +392,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
     {
-      title: "STEKEPLATE",
-      items: [
-        {
-          id: "coconut-chicken-wrap",
-          name: "Coconut Chicken Wrap",
-          description: "Kylling, mango, salat, kokosdressing",
-          nutrition: { kcal: "760", protein: "45 g", fat: "38 g", carbs: "68 g" },
-          price: "159 kr",
-          comingSoon: true,
-        },
-        {
-          id: "bali-avocado-toast",
-          name: "Bali Avocado Toast",
-          description: "Avokado, lime, chili, koriander",
-          nutrition: { kcal: "430", protein: "8 g", fat: "25 g", carbs: "46 g" },
-          price: "139 kr",
-          comingSoon: true,
-        },
-        {
-          id: "wave-rider-burger",
-          name: "Wave Rider Burger",
-          description: "Burger, cheddar, salat, pickles",
-          nutrition: { kcal: "780", protein: "38 g", fat: "48 g", carbs: "52 g" },
-          price: "179 kr",
-          comingSoon: true,
-        },
-      ],
-    },
-    {
       title: "PIZZA",
       items: [
         {
@@ -476,26 +436,31 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           nutrition: { kcal: "559", protein: "28 g", fat: "17 g", carbs: "67 g" },
           price: "179 kr",
         },
+        {
+          id: "maverick-meat-lovers",
+          name: "Maverick Meat Lovers",
+          description: "Tomatsaus, ost, pepperoni, skinke, kjøttdeig",
+          nutrition: { kcal: "1650", protein: "85 g", fat: "78 g", carbs: "140 g" },
+          price: "249 kr",
+        },
+        {
+          id: "maverick-meat-lovers-small",
+          name: "Maverick Meat Lovers (Liten)",
+          description: "Tomatsaus, ost, pepperoni, skinke, kjøttdeig",
+          nutrition: { kcal: "710", protein: "37 g", fat: "34 g", carbs: "60 g" },
+          price: "199 kr",
+        },
       ],
     },
     {
       title: "DRIKKE",
       items: [
         {
-          id: "coconut-cold-brew",
-          name: "Coconut Cold Brew",
-          description: "Cold brew, kokosmelk",
-          nutrition: { kcal: "140", protein: "1 g", fat: "9 g", carbs: "14 g" },
-          price: "69 kr",
-          comingSoon: true,
-        },
-        {
-          id: "pineapple-mint-cooler",
-          name: "Pineapple Mint Cooler",
-          description: "Ananasjuice, lime, mynte",
-          nutrition: { kcal: "110", protein: "0 g", fat: "0 g", carbs: "27 g" },
-          price: "59 kr",
-          comingSoon: true,
+          id: "sunrise-mango-smoothie",
+          name: "Sunrise Mango Smoothie",
+          description: "Mango, banan, ananasjuice",
+          nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
+          price: "79 kr",
         },
         {
           id: "soda",
@@ -627,35 +592,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
     {
-      title: "GRILLPLATTE",
-      items: [
-        {
-          id: "coconut-chicken-wrap",
-          name: "Coconut Chicken Wrap",
-          description: "Hähnchen, Mango, Salat, Kokosdressing",
-          nutrition: { kcal: "760", protein: "45 g", fat: "38 g", carbs: "68 g" },
-          price: "159 kr",
-          comingSoon: true,
-        },
-        {
-          id: "bali-avocado-toast",
-          name: "Bali Avocado Toast",
-          description: "Avocado, Limette, Chili, Koriander",
-          nutrition: { kcal: "430", protein: "8 g", fat: "25 g", carbs: "46 g" },
-          price: "139 kr",
-          comingSoon: true,
-        },
-        {
-          id: "wave-rider-burger",
-          name: "Wave Rider Burger",
-          description: "Burger, Cheddar, Salat, Pickles",
-          nutrition: { kcal: "780", protein: "38 g", fat: "48 g", carbs: "52 g" },
-          price: "179 kr",
-          comingSoon: true,
-        },
-      ],
-    },
-    {
       title: "PIZZA",
       items: [
         {
@@ -700,26 +636,31 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           nutrition: { kcal: "559", protein: "28 g", fat: "17 g", carbs: "67 g" },
           price: "179 kr",
         },
+        {
+          id: "maverick-meat-lovers",
+          name: "Maverick Meat Lovers",
+          description: "Tomatensauce, Käse, Peperoni, Schinken, Rinderhack",
+          nutrition: { kcal: "1650", protein: "85 g", fat: "78 g", carbs: "140 g" },
+          price: "249 kr",
+        },
+        {
+          id: "maverick-meat-lovers-small",
+          name: "Maverick Meat Lovers (Klein)",
+          description: "Tomatensauce, Käse, Peperoni, Schinken, Rinderhack",
+          nutrition: { kcal: "710", protein: "37 g", fat: "34 g", carbs: "60 g" },
+          price: "199 kr",
+        },
       ],
     },
     {
       title: "GETRÄNKE",
       items: [
         {
-          id: "coconut-cold-brew",
-          name: "Coconut Cold Brew",
-          description: "Cold Brew, Kokosmilch",
-          nutrition: { kcal: "140", protein: "1 g", fat: "9 g", carbs: "14 g" },
-          price: "69 kr",
-          comingSoon: true,
-        },
-        {
-          id: "pineapple-mint-cooler",
-          name: "Pineapple Mint Cooler",
-          description: "Ananassaft, Limette, Minze",
-          nutrition: { kcal: "110", protein: "0 g", fat: "0 g", carbs: "27 g" },
-          price: "59 kr",
-          comingSoon: true,
+          id: "sunrise-mango-smoothie",
+          name: "Sunrise Mango Smoothie",
+          description: "Mango, Banane, Ananassaft",
+          nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
+          price: "79 kr",
         },
         {
           id: "soda",

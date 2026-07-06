@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import MenuContent from "@/components/MenuContent";
+
+export const metadata: Metadata = {
+  title: "Full Menu",
+  description:
+    "Full menu for Brisa Cove beach cafe at Haviksanden, Lista. Smoothie bowls, pizza, nachos, fries, drinks and more — fresh and simple.",
+  openGraph: {
+    title: "Full Menu | Brisa Cove",
+    description:
+      "Smoothie bowls, pizza, nachos, fries, and drinks at Brisa Cove beach cafe, Haviksanden.",
+    images: [{ url: "/images/Sunset.jpg", width: 1200, height: 630, alt: "Sunset at Haviksanden beach" }],
+  },
+};
 
 export default function MenuPage() {
   return (

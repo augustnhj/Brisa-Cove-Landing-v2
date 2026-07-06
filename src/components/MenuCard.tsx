@@ -1,4 +1,5 @@
-import { MenuItem, NutritionLabels, itemAllergens } from "@/data/menu";
+import Image from "next/image";
+import { MenuItem, NutritionLabels, itemAllergens, itemImages } from "@/data/menu";
 
 const nutritionLabel = (label: string, value: string) => (
   <div className="flex flex-col text-xs uppercase tracking-[0.2em] text-deepteal/70">
@@ -20,42 +21,55 @@ export default function MenuCard({
     "riptide-fries", "sunset-sweet-fries", "nacho-shore-platter",
     "sunrise-mango-smoothie", "sunset-margherita", "pipeline-pepperoni",
     "hawaii-pizza", "sunset-margherita-small", "pipeline-pepperoni-small",
-    "hawaii-pizza-small",
+    "hawaii-pizza-small", "maverick-meat-lovers", "maverick-meat-lovers-small",
   ]);
   const SIMPLE_IDS = new Set(["soda", "coffee"]);
   const showDetails = !item.comingSoon && !SIMPLE_IDS.has(item.id);
   const showNutrition = showDetails && !NO_NUTRITION_IDS.has(item.id);
   const allergens = showDetails ? itemAllergens[item.id] : undefined;
+  const image = itemImages[item.id];
 
   return (
-    <div className="glass flex h-full flex-col overflow-hidden">
-      <div className="flex flex-1 flex-col gap-4 p-5">
-        <div className="flex items-start justify-between gap-4">
-          <h3 className={`text-lg font-semibold text-deepteal ${item.comingSoon ? "line-through decoration-red-600 decoration-2" : ""}`}>
+    <div className="glass flex h-full overflow-hidden">
+      {image && (
+        <div className="relative w-44 min-h-48 shrink-0">
+          <Image
+            src={image}
+            alt={item.name}
+            fill
+            className="object-cover"
+            sizes="176px"
+          />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col justify-between gap-3 p-5">
+        <div className="flex flex-col gap-1.5">
+          <h3 className={`text-xl font-bold text-deepteal ${item.comingSoon ? "line-through decoration-red-600 decoration-2" : ""}`}>
             {item.name}
           </h3>
-          {!item.comingSoon && <span className="shrink-0 text-sm font-semibold text-deepteal">{item.price}</span>}
+          {item.comingSoon && (
+            <p className="text-xs font-bold uppercase tracking-widest text-red-600">Coming Soon</p>
+          )}
+          {showDetails && (
+            <p className="text-sm text-deepteal/60">{item.description}</p>
+          )}
+          {showNutrition && (
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              {nutritionLabel(labels.kcal, item.nutrition.kcal)}
+              {nutritionLabel(labels.protein, item.nutrition.protein)}
+              {nutritionLabel(labels.fat, item.nutrition.fat)}
+              {nutritionLabel(labels.carbs, item.nutrition.carbs)}
+            </div>
+          )}
+          {allergens !== undefined && (
+            <p className="mt-1 text-xs text-deepteal/50">
+              <span className="font-semibold uppercase tracking-[0.12em]">{labels.allergens}: </span>
+              {allergens.length > 0 ? allergens.map((a) => labels.allergenNames[a] ?? a).join(", ") : labels.none}
+            </p>
+          )}
         </div>
-        {item.comingSoon && (
-          <p className="text-xs font-bold uppercase tracking-widest text-red-600">Coming Soon</p>
-        )}
-        {showDetails && (
-          <p className="text-sm text-deepteal/70">{item.description}</p>
-        )}
-        {showNutrition && (
-          <div className="grid grid-cols-2 gap-3">
-            {nutritionLabel(labels.kcal, item.nutrition.kcal)}
-            {nutritionLabel(labels.protein, item.nutrition.protein)}
-            {nutritionLabel(labels.fat, item.nutrition.fat)}
-            {nutritionLabel(labels.carbs, item.nutrition.carbs)}
-          </div>
-        )}
-        {alignBottom && <div className="flex-1" />}
-        {allergens !== undefined && (
-          <div className="border-t border-deepteal/10 pt-3 text-xs text-deepteal/60">
-            <span className="font-semibold uppercase tracking-[0.15em]">{labels.allergens}: </span>
-            {allergens.length > 0 ? allergens.map((a) => labels.allergenNames[a] ?? a).join(", ") : labels.none}
-          </div>
+        {!item.comingSoon && (
+          <span className="text-xl font-bold text-deepteal">{item.price}</span>
         )}
       </div>
     </div>

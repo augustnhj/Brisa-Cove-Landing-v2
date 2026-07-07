@@ -58,7 +58,7 @@ const t = {
       title: "Locally driven. Created for summer. Built for community.",
       description:
         "Rooted in Lista, Brisa Cove celebrates the people and makers who shape the coast. Expect collaborations with local surf crews, artists, and producers as the seasons roll in.",
-      partners: ["Local surf schools", "Partnership with Farsund Folkepub", "Local artists"],
+      partners: ["Local surf schools", "Right by the beach", "Local artists"],
     },
     visit: {
       kicker: "Practical info",
@@ -139,7 +139,7 @@ const t = {
       title: "Lokal getrieben. Für den Sommer geschaffen. Für die Gemeinschaft gebaut.",
       description:
         "Mit Wurzeln in Lista feiert Brisa Cove die Menschen und Macher, die die Küste prägen. Erwartet Kooperationen mit lokalen Surfclubs, Künstlern und Produzenten, wenn die Saisons kommen.",
-      partners: ["Lokale Surfschulen", "Partnerschaft mit Farsund Folkepub", "Lokale Künstler"],
+      partners: ["Lokale Surfschulen", "Direkt am Strand", "Lokale Künstler"],
     },
     visit: {
       kicker: "Praktische Infos",
@@ -220,7 +220,7 @@ const t = {
       title: "Lokalt drevet. Skapt for sommeren. Bygget for fellesskap.",
       description:
         "Med røtter i Lista feirer Brisa Cove menneskene og skaperne som former kysten. Forvent samarbeid med lokale surfegrupper, kunstnere og produsenter etter hvert som sesongene rulles inn.",
-      partners: ["Lokale surfskoler", "Samarbeid med Farsund Folkepub", "Lokale kunstnere"],
+      partners: ["Lokale surfskoler", "Rett ved stranden", "Lokale kunstnere"],
     },
     visit: {
       kicker: "Praktisk info",

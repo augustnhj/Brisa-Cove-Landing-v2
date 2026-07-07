@@ -44,8 +44,6 @@ export const itemImages: Record<string, string> = {
   "acai-anchor-bowl":           "/images/menu/Acai Anchor Bowl.png",
   "mango-wave-bowl":            "/images/menu/Mango Wave Bowl.png",
   "nacho-shore-platter":        "/images/menu/Nacho Shore Platter.png",
-  "pipeline-pepperoni":         "/images/menu/Pipeline Pepperoni.png",
-  "pipeline-pepperoni-small":   "/images/menu/Pipeline Pepperoni.png",
   "hawaii-pizza":               "/images/menu/Hang Ten Hawaiian.png",
   "hawaii-pizza-small":         "/images/menu/Hang Ten Hawaiian.png",
   "maverick-meat-lovers":       "/images/menu/Maverick Meat Lovers.png",
@@ -100,35 +98,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
     {
-      title: "CHICKEN WINGS",
-      items: [
-        {
-          id: "sunset-sweet-chili-wings",
-          name: "Sunset Sweet-Chili Wings",
-          description: "Chicken wings, sweet chili, lime",
-          nutrition: { kcal: "660", protein: "54 g", fat: "45 g", carbs: "16 g" },
-          price: "149 kr",
-          comingSoon: true,
-        },
-        {
-          id: "reef-bbq-wings",
-          name: "Reef BBQ Wings",
-          description: "Chicken wings, BBQ glaze",
-          nutrition: { kcal: "650", protein: "54 g", fat: "45 g", carbs: "12 g" },
-          price: "145 kr",
-          comingSoon: true,
-        },
-        {
-          id: "lava-sriracha-honey-wings",
-          name: "Lava Sriracha-Honey Wings",
-          description: "Chicken wings, sriracha, honey",
-          nutrition: { kcal: "760", protein: "54 g", fat: "52 g", carbs: "26 g" },
-          price: "155 kr",
-          comingSoon: true,
-        },
-      ],
-    },
-    {
       title: "NACHOS",
       items: [
         {
@@ -175,19 +144,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Mango, banana, pineapple juice",
           nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
           price: "79 kr",
-        },
-      ],
-    },
-    {
-      title: "SWEET",
-      items: [
-        {
-          id: "banana-boardwalk-bread",
-          name: "Banana Boardwalk Bread",
-          description: "Banana bread",
-          nutrition: { kcal: "230", protein: "5 g", fat: "9 g", carbs: "32 g" },
-          price: "49 kr",
-          comingSoon: true,
         },
       ],
     },
@@ -300,35 +256,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
     {
-      title: "KYLLINGVINGER",
-      items: [
-        {
-          id: "sunset-sweet-chili-wings",
-          name: "Sunset Sweet-Chili Wings",
-          description: "Kyllingvinger, sweet chili, lime",
-          nutrition: { kcal: "660", protein: "54 g", fat: "45 g", carbs: "16 g" },
-          price: "149 kr",
-          comingSoon: true,
-        },
-        {
-          id: "reef-bbq-wings",
-          name: "Reef BBQ Wings",
-          description: "Kyllingvinger, BBQ-glaze",
-          nutrition: { kcal: "650", protein: "54 g", fat: "45 g", carbs: "12 g" },
-          price: "145 kr",
-          comingSoon: true,
-        },
-        {
-          id: "lava-sriracha-honey-wings",
-          name: "Lava Sriracha-Honey Wings",
-          description: "Kyllingvinger, sriracha, honning",
-          nutrition: { kcal: "760", protein: "54 g", fat: "52 g", carbs: "26 g" },
-          price: "155 kr",
-          comingSoon: true,
-        },
-      ],
-    },
-    {
       title: "NACHOS",
       items: [
         {
@@ -375,19 +302,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Mango, banan, ananasjuice",
           nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
           price: "79 kr",
-        },
-      ],
-    },
-    {
-      title: "SØTT",
-      items: [
-        {
-          id: "banana-boardwalk-bread",
-          name: "Banana Boardwalk Bread",
-          description: "Bananbrød",
-          nutrition: { kcal: "230", protein: "5 g", fat: "9 g", carbs: "32 g" },
-          price: "49 kr",
-          comingSoon: true,
         },
       ],
     },
@@ -500,35 +414,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
       ],
     },
     {
-      title: "CHICKEN WINGS",
-      items: [
-        {
-          id: "sunset-sweet-chili-wings",
-          name: "Sunset Sweet-Chili Wings",
-          description: "Chicken Wings, Sweet Chili, Limette",
-          nutrition: { kcal: "660", protein: "54 g", fat: "45 g", carbs: "16 g" },
-          price: "149 kr",
-          comingSoon: true,
-        },
-        {
-          id: "reef-bbq-wings",
-          name: "Reef BBQ Wings",
-          description: "Chicken Wings, BBQ-Glasur",
-          nutrition: { kcal: "650", protein: "54 g", fat: "45 g", carbs: "12 g" },
-          price: "145 kr",
-          comingSoon: true,
-        },
-        {
-          id: "lava-sriracha-honey-wings",
-          name: "Lava Sriracha-Honey Wings",
-          description: "Chicken Wings, Sriracha, Honig",
-          nutrition: { kcal: "760", protein: "54 g", fat: "52 g", carbs: "26 g" },
-          price: "155 kr",
-          comingSoon: true,
-        },
-      ],
-    },
-    {
       title: "NACHOS",
       items: [
         {
@@ -575,19 +460,6 @@ export const menuSections: Record<MenuLanguage, MenuSection[]> = {
           description: "Mango, Banane, Ananassaft",
           nutrition: { kcal: "360", protein: "3 g", fat: "1 g", carbs: "85 g" },
           price: "79 kr",
-        },
-      ],
-    },
-    {
-      title: "SÜSSES",
-      items: [
-        {
-          id: "banana-boardwalk-bread",
-          name: "Banana Boardwalk Bread",
-          description: "Bananenbrot",
-          nutrition: { kcal: "230", protein: "5 g", fat: "9 g", carbs: "32 g" },
-          price: "49 kr",
-          comingSoon: true,
         },
       ],
     },

@@ -39,7 +39,7 @@ export default function MenuCard({
             src={image}
             alt={item.name}
             fill
-            className="object-cover"
+            className="object-cover [object-position:center_65%]"
             sizes="(max-width: 768px) 100vw, 25vw"
           />
         </div>
@@ -67,15 +67,15 @@ export default function MenuCard({
   }
 
   return (
-    <div className="glass flex h-full overflow-hidden">
+    <div className="glass flex h-full flex-col overflow-hidden sm:flex-row">
       {image && (
-        <div className="relative w-44 min-h-48 shrink-0">
+        <div className="relative h-52 w-full shrink-0 sm:h-auto sm:w-44 sm:min-h-48">
           <Image
             src={image}
             alt={item.name}
             fill
-            className="object-cover"
-            sizes="176px"
+            className="object-cover [object-position:center_65%]"
+            sizes="(max-width: 640px) 100vw, 176px"
           />
         </div>
       )}

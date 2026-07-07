@@ -71,6 +71,7 @@ const t = {
       booking: { label: "Bookings", value: "sondreeikeland@brisacove.no" },
       social: { label: "Follow us", comingSoon: "More posts coming soon" },
       contact: { label: "Contact" },
+      findUs: { label: "Find us online", tripadvisor: "TripAdvisor", maps: "Google Maps" },
       ctaMenu: "See menu",
       ctaBook: "Book event",
       tagline: "Good vibes. Fresh bites. Beach life.",
@@ -151,6 +152,7 @@ const t = {
       booking: { label: "Buchungen", value: "sondreeikeland@brisacove.no" },
       social: { label: "Folgt uns", comingSoon: "Mehr Beiträge kommen bald" },
       contact: { label: "Kontakt" },
+      findUs: { label: "Online finden", tripadvisor: "TripAdvisor", maps: "Google Maps" },
       ctaMenu: "Menü ansehen",
       ctaBook: "Event buchen",
       tagline: "Gute Stimmung. Frische Bissen. Strandleben.",
@@ -231,6 +233,7 @@ const t = {
       booking: { label: "Bestillinger", value: "sondreeikeland@brisacove.no" },
       social: { label: "Følg oss", comingSoon: "Flere innlegg kommer snart" },
       contact: { label: "Kontakt" },
+      findUs: { label: "Finn oss på nett", tripadvisor: "TripAdvisor", maps: "Google Maps" },
       ctaMenu: "Se meny",
       ctaBook: "Book arrangement",
       tagline: "God stemning. Ferske biter. Strandliv.",
@@ -494,14 +497,29 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
-                {copy.visit.contact.label}
-              </h3>
-              <div className="mt-2 flex flex-col gap-1 text-base text-deepteal">
-                <a href="tel:+4740194390" className="hover:text-seafoam transition-colors">+47 401 94 390</a>
-                <a href="tel:+4748438319" className="hover:text-seafoam transition-colors">+47 484 38 319</a>
-                <a href="mailto:sondreeikeland@brisacove.no" className="hover:text-seafoam transition-colors">sondreeikeland@brisacove.no</a>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
+                  {copy.visit.contact.label}
+                </h3>
+                <div className="mt-2 flex flex-col gap-1 text-base text-deepteal">
+                  <a href="tel:+4740194390" className="hover:text-seafoam transition-colors">+47 401 94 390</a>
+                  <a href="tel:+4748438319" className="hover:text-seafoam transition-colors">+47 484 38 319</a>
+                  <a href="mailto:sondreeikeland@brisacove.no" className="hover:text-seafoam transition-colors">sondreeikeland@brisacove.no</a>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-deepteal/70">
+                  {copy.visit.findUs.label}
+                </h3>
+                <div className="mt-2 flex flex-col gap-1 text-base text-deepteal">
+                  <a href="https://www.tripadvisor.com/Restaurant_Review-g668811-d34442354-Reviews-Brisa_Cove-Farsund_Vest_Agder_Southern_Norway.html" target="_blank" rel="noopener noreferrer" className="hover:text-seafoam transition-colors">
+                    {copy.visit.findUs.tripadvisor}
+                  </a>
+                  <a href="https://www.google.com/maps/place/Brisa+Cove/@58.1278988,6.9563334,10.9z/data=!4m6!3m5!1s0x4637650018f1a137:0xc0991b5cb018e217!8m2!3d58.0705667!4d6.7260905!16s%2Fg%2F11z8gnfqtm?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-seafoam transition-colors">
+                    {copy.visit.findUs.maps}
+                  </a>
+                </div>
               </div>
             </div>
             <div className="flex flex-wrap gap-4">

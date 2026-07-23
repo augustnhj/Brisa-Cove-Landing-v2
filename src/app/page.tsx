@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import FavoritesSection from "@/components/FavoritesSection";
+import NextEventSection from "@/components/NextEventSection";
 import LanguageSlider from "@/components/LanguageSlider";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -261,7 +262,7 @@ export default function Home() {
     <main className="min-h-screen">
       <section className="relative h-screen overflow-hidden">
         <Image
-          src="/images/hero-cafe.jpg"
+          src="/images/HEADER2.png"
           alt="Havika Strandcafe entrance with teal doors and surfboard sign"
           fill
           priority
@@ -297,6 +298,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <nav className="hidden items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-white/75 lg:flex">
                 <a href="#experience" className="transition-colors hover:text-white">{copy.nav.experience}</a>
+                <a href="#event" className="transition-colors hover:text-white">Event</a>
                 <a href="#favorites" className="transition-colors hover:text-white">{copy.nav.favorites}</a>
                 <a href="#activities" className="transition-colors hover:text-white">{copy.nav.activities}</a>
                 <a href="#local" className="transition-colors hover:text-white">{copy.nav.local}</a>
@@ -349,6 +351,8 @@ export default function Home() {
         </div>
       </section>
 
+
+      <NextEventSection />
 
       <section id="hours" className="px-6 py-16 sm:px-10">
         <div className="mx-auto w-full max-w-6xl grid gap-6 md:grid-cols-2">

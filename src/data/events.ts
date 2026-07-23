@@ -28,28 +28,28 @@ export type EventInfo = {
 
 export const nextEvent: EventInfo = {
   en: {
-    title: "Friday Nights at Brisa Cove",
+    title: "LILLE CAESAR X BRISA COVE",
     description:
-      "From July 1st we're (pending permission) serving alcohol every Friday — and we'll be running events and arrangements to make your beach Fridays something to look forward to. Stay tuned.",
-    ctaLabel: "Follow us for updates",
-    kickerLabel: "Coming up",
+      "We're teaming up with Lille Caesar for a special night at Haviksanden. Good music, good food, and great vibes by the beach.",
+    ctaLabel: "GET TICKETS",
+    kickerLabel: "Next event",
   },
   no: {
-    title: "Fredagskvelder på Brisa Cove",
+    title: "LILLE CAESAR X BRISA COVE",
     description:
-      "Fra 1. juli serverer vi (under forutsetning av tillatelse) alkohol hver fredag — og vi planlegger arrangementer for å gjøre fredagene dine på stranden til noe å glede seg til. Følg med!",
-    ctaLabel: "Følg oss for oppdateringer",
-    kickerLabel: "Kommer snart",
+      "Vi slår oss sammen med Lille Caesar for en spesiell kveld på Haviksanden. God musikk, god mat og gode vibes ved stranden.",
+    ctaLabel: "GET TICKETS",
+    kickerLabel: "Neste arrangement",
   },
   de: {
-    title: "Freitagsabende bei Brisa Cove",
+    title: "LILLE CAESAR X BRISA COVE",
     description:
-      "Ab dem 1. Juli servieren wir (vorbehaltlich Genehmigung) jeden Freitag Alkohol — und wir planen Events, um eure Freitage am Strand zu etwas Besonderem zu machen. Bleibt dran!",
-    ctaLabel: "Folgt uns für Updates",
-    kickerLabel: "Demnächst",
+      "Wir tun uns mit Lille Caesar für einen besonderen Abend am Haviksanden zusammen. Gute Musik, gutes Essen und tolle Stimmung am Strand.",
+    ctaLabel: "GET TICKETS",
+    kickerLabel: "Nächstes Event",
   },
-  date: "From 1 July 2026",
-  time: "Every Friday",
-  ctaHref: "https://www.instagram.com/brisacove/",
+  date: "July 31, 2026",
+  time: "Haviksanden Beach",
+  ctaHref: "https://brisa-cove.hoopla.no/event/870535212",
   location: "Haviksanden Beach, Lista",
 };

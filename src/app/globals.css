@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'BrushyStrokes';
+  src: url('/fonts/BrushyStrokes.ttf') format('truetype');
+  font-display: swap;
+}
+
 :root {
   --seafoam: 74 210 180;
   --deepteal: 16 96 94;

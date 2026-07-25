@@ -83,8 +83,8 @@ const t = {
       days: [
         { day: "Wednesday", time: "11:30–20:00" },
         { day: "Friday",    time: "11:30–20:00" },
-        { day: "Saturday",  time: "09:30–20:00" },
-        { day: "Sunday",    time: "09:30–18:00" },
+        { day: "Saturday",  time: "11:30–20:00" },
+        { day: "Sunday",    time: "11:30–18:00" },
       ],
     },
     followUs: { title: "Follow Us" },
@@ -164,8 +164,8 @@ const t = {
       days: [
         { day: "Mittwoch", time: "11:30–20:00" },
         { day: "Freitag",  time: "11:30–20:00" },
-        { day: "Samstag",  time: "09:30–20:00" },
-        { day: "Sonntag",  time: "09:30–18:00" },
+        { day: "Samstag",  time: "11:30–20:00" },
+        { day: "Sonntag",  time: "11:30–18:00" },
       ],
     },
     followUs: { title: "Folgt uns" },
@@ -245,8 +245,8 @@ const t = {
       days: [
         { day: "Onsdag",  time: "11:30–20:00" },
         { day: "Fredag",  time: "11:30–20:00" },
-        { day: "Lørdag",  time: "09:30–20:00" },
-        { day: "Søndag",  time: "09:30–18:00" },
+        { day: "Lørdag",  time: "11:30–20:00" },
+        { day: "Søndag",  time: "11:30–18:00" },
       ],
     },
     followUs: { title: "Følg oss" },

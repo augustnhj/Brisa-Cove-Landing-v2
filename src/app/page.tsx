@@ -260,13 +260,23 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative aspect-[2/3] overflow-hidden sm:h-screen sm:aspect-auto">
+        {/* Desktop hero */}
         <Image
           src="/images/HEADER2.png"
           alt="Havika Strandcafe entrance with teal doors and surfboard sign"
           fill
           priority
-          className="object-cover object-center"
+          className="hidden object-cover object-center sm:block"
+          sizes="100vw"
+        />
+        {/* Mobile hero */}
+        <Image
+          src="/images/HElt Helt Helt Ferdig.png"
+          alt="Brisa Cove beach cafe"
+          fill
+          priority
+          className="block object-cover object-top sm:hidden"
           sizes="100vw"
         />
 
@@ -362,12 +372,22 @@ export default function Home() {
               <h2 className="section-title">{copy.openingHours.title}</h2>
             </div>
             <div className="flex flex-col divide-y divide-deepteal/10">
-              {copy.openingHours.days.map(({ day, time }) => (
-                <div key={day} className="flex items-center justify-between py-3">
-                  <span className="text-base font-semibold text-deepteal">{day}</span>
-                  <span className="text-base font-semibold text-deepteal/70">{time}</span>
-                </div>
-              ))}
+              {copy.openingHours.days.map(({ day, time }) => {
+                // TEMP: remove after 31 July 2026
+                const isFriday = day === "Friday" || day === "Fredag" || day === "Freitag";
+                return (
+                  <div key={day} className="flex flex-col py-3 gap-0.5">
+                    <div className="flex items-center justify-between">
+                      <span className={`text-base font-semibold ${isFriday ? "line-through text-deepteal/40" : "text-deepteal"}`}>{day}</span>
+                      <span className={`text-base font-semibold ${isFriday ? "line-through text-deepteal/40" : "text-deepteal/70"}`}>{time}</span>
+                    </div>
+                    {/* TEMP: remove after 31 July 2026 */}
+                    {isFriday && (
+                      <p className="text-xs font-semibold text-red-500">Closed – preparing for the concert!</p>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="glass flex flex-col gap-6 p-8">
